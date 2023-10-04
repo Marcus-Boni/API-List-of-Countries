@@ -1,11 +1,19 @@
 import { SpecificCountryCardProps } from "@/types";
-import { formatNumbers } from "../../utils/formatNumbers";
+import { formatNumbers } from "../utils/formatNumbers";
 import Image from "next/image";
 
-export const SpecificCountryCard = ({ capital, region, subregion, population, flag, altflag, languages }: SpecificCountryCardProps) => {
+export const SpecificCountryCard = ({
+  capital,
+  region,
+  subregion,
+  population,
+  flag,
+  altflag,
+  languages,
+}: SpecificCountryCardProps) => {
   return (
-    <article className="mt-2 flex items-center justify-between rounded-xl bg-gray-300 p-12">
-      <div className="flex flex-col gap-3 text-left">
+    <article className="mt-2 flex flex-col items-center justify-between rounded-xl bg-gray-300 p-6 md:flex-row md:p-12">
+      <div className="mt-2 flex flex-col gap-3 text-left md:mt-0">
         {capital && (
           <p className="text-lg">
             <b>🏙️ Capital: </b> {capital}
@@ -36,7 +44,7 @@ export const SpecificCountryCard = ({ capital, region, subregion, population, fl
           )}
         </p>
       </div>
-      <div className="relative order-first my-2 h-64 w-96 shadow-md md:order-last">
+      <div className="relative order-first my-2 h-64 w-full shadow-md md:order-last md:w-96">
         <Image src={flag} alt={altflag ? altflag : "Non informed Image"} fill className="object-cover" />
       </div>
     </article>
