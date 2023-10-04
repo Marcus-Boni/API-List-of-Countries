@@ -1,5 +1,7 @@
 # [🌍 Lista de Países usando Next.js](https://codante.io/mini-projetos/lista-de-paises-nextjs)
 
+### 👉 Access Link Here: https://api-list-of-countries.vercel.app/
+
 Explore o poder da versão 13 do Next.js criando uma lista de países utilizando a API [REST Countries](https://restcountries.com/).
 
 ## 🔨 Requisitos
